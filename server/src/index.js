@@ -10,12 +10,16 @@ const app = express();
 
 app.use(
   cors({
-    origin: ServerConfig.Frontend_URL || 'https://resume-radar-five.vercel.app/',
+    origin: [
+      'http://localhost:5173',
+      'https://resume-radar-five.vercel.app'
+    ],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
   })
 );
+
 console.log(ServerConfig)
 
 app.use(express.json());
