@@ -10,7 +10,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ServerConfig.Frontend_URL,
+    origin: ServerConfig.Frontend_URL || 'https://resume-radar-five.vercel.app/',
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
