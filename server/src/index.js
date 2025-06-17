@@ -3,7 +3,7 @@ import express from "express";
 import ServerConfig from "./config/ServerConfig.js";
 import cors from "cors";
 import resumeRoutes from "./routes/resume.route.js";
-import connectDB from "./config/dbconfig.js";
+import connectDB from "./config/dbConfig.js";
 import dotenv from "dotenv";
 dotenv.config();
 const app = express();
